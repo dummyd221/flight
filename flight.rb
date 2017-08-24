@@ -3,6 +3,12 @@ require_relative 'sendEmail'
 
 baseValue = 404
 
+# Determine the directory containing chromedriver.exe
+chromedriver_directory = File.join(File.absolute_path('../..', File.dirname(__FILE__)),"drivers", "chromedriver")
+
+# Add that directory to the path
+ENV['PATH'] = "#{ENV['PATH']}#{File::PATH_SEPARATOR}#{chromedriver_directory}"
+
 driver = Selenium::WebDriver.for :chrome
 driver.navigate.to "https://www.google.co.uk/flights/?f=0&gl=uk#search;f=LHR;t=BLR;d=2017-11-08;r=2017-11-23;tt=o;a=BA;s=1;q=british+airways+book+flights"
 
