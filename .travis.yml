@@ -11,5 +11,5 @@ rvm:
  - "2.4"
 
 
-script: ruby flight.rb
+script: watch -n 300 ruby flight.rb 404
 #watch -n 300 ruby flight.rb
