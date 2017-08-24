@@ -1,8 +1,8 @@
 before_install:
  - "bundle install"
  - "export DISPLAY=:99.0"
- - "export PATH=$PATH:$PWD/drivers/chromedriver"
- - "chmod 777 ./drivers/chromedriver"
+ - "export PATH=$PATH:$PWD/drivers"
+ - "chmod 777 $PWD/drivers/chromedriver"
  - "echo $PATH"
  - "sh -e /etc/init.d/xvfb start"
 
