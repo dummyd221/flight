@@ -4,7 +4,7 @@ require_relative 'sendEmail'
 baseValue = 404
 
 # Determine the directory containing chromedriver.exe
-chromedriver_directory = File.join(File.absolute_path('../..', File.dirname(__FILE__)),"drivers", "chromedriver")
+chromedriver_directory = File.join(File.absolute_path('.', File.dirname(__FILE__)),"drivers", "chromedriver")
 
 # Add that directory to the path
 ENV['PATH'] = "#{ENV['PATH']}#{File::PATH_SEPARATOR}#{chromedriver_directory}"
