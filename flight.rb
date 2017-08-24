@@ -23,16 +23,17 @@ ensure
 end
 
 if actValue < baseValue
-  sub = "Current value: #{actValue} is less than baseValue: #{baseValue}, send email alert"
-  body = "Current value: #{actValue} is less than baseValue: #{baseValue}, send email alert"
+  sub = "Current value: #{actValue} IS LESS THAN BASEVALUE: #{baseValue}, send email alert"
+  body = "Current value: #{actValue} IS LESS THAN BASEVALUE: #{baseValue}, send email alert"
   puts body
+  Email.sendMail("ranjesh1@gmail.com", sub, body)
 else
-  sub = "Current value: #{actValue} is gretaer than/equalto baseValue: #{baseValue}, so dont send email alert"
-  body = "Current value: #{actValue} is gretaer than/equalto baseValue: #{baseValue}, so dont send email alert"
+  sub = "Current value: #{actValue} IS GREATER THAN OR EQUAL TO BASEVALUE: #{baseValue}, so dont send email alert"
+  body = "Current value: #{actValue} IS GREATER THAN OR EQUAL TO BASEVALUE: #{baseValue}, so dont send email alert"
   puts body
 end
 
-Email.sendMail("ranjesh1@gmail.com", sub, body)
+
 
 
 
