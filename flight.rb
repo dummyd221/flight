@@ -2,7 +2,7 @@ require 'selenium-webdriver'
 require_relative 'sendEmail'
 
 baseValue = 404
-# actValue = 0
+
 driver = Selenium::WebDriver.for :chrome
 driver.navigate.to "https://www.google.co.uk/flights/?f=0&gl=uk#search;f=LHR;t=BLR;d=2017-11-08;r=2017-11-23;tt=o;a=BA;s=1;q=british+airways+book+flights"
 
