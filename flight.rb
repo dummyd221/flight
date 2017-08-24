@@ -1,7 +1,7 @@
 require 'selenium-webdriver'
 require_relative 'sendEmail'
 
-baseValue = 404
+baseValue = eval(ARGV[0])
 
 # Determine the directory containing chromedriver.exe
 chromedriver_directory = File.join(File.absolute_path('.', File.dirname(__FILE__)),"drivers", "chromedriver")
@@ -26,7 +26,6 @@ if actValue < baseValue
   sub = "Current value: #{actValue} is less than baseValue: #{baseValue}, send email alert"
   body = "Current value: #{actValue} is less than baseValue: #{baseValue}, send email alert"
   puts body
-
 else
   sub = "Current value: #{actValue} is gretaer than/equalto baseValue: #{baseValue}, so dont send email alert"
   body = "Current value: #{actValue} is gretaer than/equalto baseValue: #{baseValue}, so dont send email alert"

@@ -12,3 +12,4 @@ rvm:
 
 
 script: ruby flight.rb
+#watch -n 300 ruby flight.rb
