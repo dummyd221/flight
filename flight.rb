@@ -13,7 +13,6 @@ begin
   actValue = eval(element.text.tr("£", ""))
   puts actValue
 ensure
-  #Logger login error to text error log file
   driver.quit #---------------------------> always goes to ensure and quits
 end
 
