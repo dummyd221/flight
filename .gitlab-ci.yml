@@ -1,0 +1,13 @@
+before_script:
+ - pwd
+ - bundle install
+ - export DISPLAY=:99.0
+ - export PATH=$PATH:$PWD/drivers
+ - chmod 777 $PWD/drivers/chromedriver
+ - echo $PATH
+ - sh -e /etc/init.d/xvfb start
+
+rspec:
+  script:
+   - watch -n 300 ruby flight.rb 404
+#watch -n 300 ruby flight.rb
